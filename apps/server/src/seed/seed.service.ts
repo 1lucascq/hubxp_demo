@@ -73,13 +73,18 @@ export class SeedService {
                 [
                     {
                         date: new Date(),
-                        productIds: [products[0]._id],
+                        products: [products[0]._id],
                         total: 1000,
                     },
                     {
                         date: new Date(),
-                        productIds: [products[1]._id, products[2]._id],
+                        products: [products[1]._id, products[2]._id],
                         total: 180,
+                    },
+					{
+                        date: new Date(),
+                        products: [products[0]._id, products[1]._id, products[2]._id],
+                        total: 1180,
                     },
                 ],
                 { session },
