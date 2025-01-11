@@ -9,6 +9,7 @@
 	"seed": "npm run seed --prefix apps/server",
 	"dev": "concurrently \"npm run start:server\" \"npm run start:web\"",
 	"dev:server": "npm run start:dev --prefix apps/server",
+	"dev:web": "npm start --prefix apps/web",
 	"docker:up": "cd infra && docker-compose up -d",
     "docker:down": "cd infra && docker-compose down"
 },

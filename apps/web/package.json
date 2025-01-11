@@ -7,20 +7,26 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.3.1",
     "@mui/material": "^6.3.1",
+    "@mui/x-data-grid": "^7.23.6",
+    "@tanstack/react-query": "^5.63.0",
     "cra-template-typescript": "1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
     "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -34,5 +40,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@chromatic-com/storybook": "^3.2.3",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/preset-create-react-app": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-webpack5": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@types/react-query": "^1.2.9",
+    "eslint-plugin-storybook": "^0.11.2",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.4.7",
+    "webpack": "^5.97.1"
   }
 }
