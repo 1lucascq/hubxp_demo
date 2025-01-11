@@ -11,7 +11,7 @@ export class UploadService {
         const configService = new ConfigService();
         const LOCALSTACK_PORT = configService.get<string>('LOCALSTACK_PORT');
 		const bucketName = 'hubxp';
-        const key = `hubxp-key-${file.originalname}`;
+        const key = `hubxp-notuuid-${file.originalname}`;
         const command = new PutObjectCommand({
             Bucket: 'hubxp',
             Key: key,
