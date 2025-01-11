@@ -35,25 +35,27 @@ export class SeedService {
             const products = await this.productModel.create(
                 [
                     {
-                        name: 'Smartphone',
+                        name: 'Cell phone',
                         description: 'Latest model',
                         price: 1000,
                         categories: [categories[0]._id],
-                        imageUrl: 'https://fake-url.com/smartphone.jpg',
+                        imageUrl: 'https://img.olx.com.br/images/93/934828117788589.jpg',
                     },
                     {
                         name: 'T-Shirt',
                         description: 'Cotton t-shirt',
                         price: 30,
                         categories: [categories[1]._id],
-                        imageUrl: 'https://fake-url.com/tshirt.jpg',
+                        imageUrl:
+                            'https://colorfulstandard.com/cdn/shop/files/CS2056_Female_OversizedOrganicT-Shirt-MarineBlue_1.jpg?v=1702562308&width=2048',
                     },
                     {
                         name: 'Microwave',
                         description: 'Kitchen appliance',
                         price: 150,
                         categories: [categories[2]._id],
-                        imageUrl: 'https://fake-url.com/microwave.jpg',
+                        imageUrl:
+                            'https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/05023154-b723-11ec-9abf-eecbf35dfbeb.jpg',
                     },
                 ],
                 { session },
@@ -81,7 +83,7 @@ export class SeedService {
                         products: [products[1]._id, products[2]._id],
                         total: 180,
                     },
-					{
+                    {
                         date: new Date(),
                         products: [products[0]._id, products[1]._id, products[2]._id],
                         total: 1180,
