@@ -24,3 +24,11 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# LocalStack
+.localstack
+**/localstack-data/
+*.pem
+*.key
+*.crt
+machine.json
