@@ -53,8 +53,8 @@ export default function App() {
                 openOrders={openOrders}
                 openNewCategory={openNewCategory}
                 openNewProduct={openNewProduct}
+                children={<ProductList products={products!} />}
             >
-                <ProductList products={products!} />
             </Layout>
 
             <AppModals

@@ -15,8 +15,8 @@ root.render(
         <QueryClientProvider client={queryClient}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <CartProvider>
-                    <App />
+                <CartProvider children={<App />}>
+
                 </CartProvider>
             </ThemeProvider>
         </QueryClientProvider>

@@ -17,6 +17,7 @@ interface CartContextData {
     isCartOpen: boolean;
     setIsCartOpen: (isOpen: boolean) => void;
     isLoading: boolean;
+	setIsLoading: (isLoading: boolean) => void;
 }
 
 const CartContext = createContext<CartContextData>({} as CartContextData);
@@ -105,6 +106,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                 isCartOpen,
                 setIsCartOpen,
                 isLoading,
+				setIsLoading
             }}
         >
             {children}
