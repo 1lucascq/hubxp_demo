@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,11 +8,10 @@
     "@mui/icons-material": "^6.3.1",
     "@mui/material": "^6.3.1",
     "@mui/x-data-grid": "^7.23.6",
-    "@tanstack/react-query": "^5.63.0",
-    "cra-template-typescript": "1.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-query": "^3.39.3",
+    "@tanstack/react-query": "^5.64.0",
+    "cra-template-typescript": "^1.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -25,8 +24,7 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "plugin:storybook/recommended"
+      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -42,8 +40,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@chromatic-com/storybook": "^3.2.3",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-onboarding": "^8.4.7",
@@ -54,8 +50,6 @@
     "@storybook/test": "^8.4.7",
     "@types/react-query": "^1.2.9",
     "eslint-plugin-storybook": "^0.11.2",
-    "prop-types": "^15.8.1",
-    "storybook": "^8.4.7",
-    "webpack": "^5.97.1"
+    "storybook": "^8.4.7"
   }
 }
