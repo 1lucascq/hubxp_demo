@@ -16,7 +16,7 @@ export class SeedService {
         private readonly orderModel: Model<Order>,
     ) {}
 
-    async runSeed() {
+    async runSeed(retries = 5) {
         const session = await this.categoryModel.db.startSession();
         session.startTransaction();
 
@@ -93,10 +93,18 @@ export class SeedService {
             );
 
             await session.commitTransaction();
-            console.log('Seed data populated successfully!');
         } catch (error) {
-            await session.abortTransaction();
             console.error('Failed to seed database:', error);
+            if (session.inTransaction()) {
+                await session.abortTransaction();
+            }
+            if (retries > 0) {
+                console.log(`Retrying... (${retries} retries left)`);
+                await new Promise((resolve) => setTimeout(resolve, 5000));
+                await this.runSeed(retries - 1);
+            } else {
+                console.error('Max retries reached. Seed failed.');
+            }
         } finally {
             session.endSession();
         }
